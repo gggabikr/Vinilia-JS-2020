@@ -12,6 +12,24 @@ array로 가져옴. 그럼 또 그 결과에서 하나의 값을 꺼내는 작�
 const USER_LS = "currentUser";
     SHOWING_CLASSNAME = "showing";
 
+function saveName(text){
+    localStorage.setItem(USER_LS, text);
+}
+
+
+function handleSubmit(event){
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGreeting(currentValue)
+    saveName(currentValue);
+}
+
+function askForName(){
+    form.classList.add(SHOWING_CLASSNAME)
+    form.addEventListener("submit", handleSubmit)
+}
+
+
 function paintGreeting(text){
     form.classList.remove(SHOWING_CLASSNAME);
     greeting.classList.add(SHOWING_CLASSNAME);
@@ -23,6 +41,7 @@ function loadName(){
 
     if(currentUser ===null){
         //when user is not exist
+        askForName();
     }
     else{
         //when user is exist
