@@ -7,22 +7,37 @@
   </head>
 
   <body>
-    <div class="js-clock">
-      <h1 class="js-title">00:00:00</h1>
+    <main class="mainbox">
+      <div class="js-clock">
+        <h1 class="js-title">00:00:00</h1>
+      </div>
+      <form class="js-form form">
+        <input type="text" placeholder="What is your name?" />
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <form class="js-toDoForm">
+        <input type="text" placeholder="Write a to do" />
+      </form>
+      <ul class="js-toDoList"></ul>
+    </main>
+    <div class="weather">
+      <span class="js-location"></span>
+      <div class="weatherInfo">
+        <span class="js-temp"></span>
+        <!-- <span class="js-weather"
+          ><i id="icon" class="fa-lg" aria-hidden="true"></i
+        ></span> -->
+        <div class="weather-icon"><img src="icons/unknown.png" /></div>
+      </div>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do" />
-    </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <script src="bg.js"></script>
     <script src="weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

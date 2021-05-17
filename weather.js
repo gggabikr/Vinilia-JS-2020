@@ -1,4 +1,7 @@
+const locationName = document.querySelector(".js-location")
 const weather = document.querySelector(".js-weather")
+const temp = document.querySelector(".js-temp")
+let locationIcon = document.querySelector('.weather-icon');
 
 const API_KEY = "1354dbd1a47d1a59150c07ccbceea285";
 
@@ -16,8 +19,30 @@ function getWeather(lat,lng){
         console.log(json)
         const temperture = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperture}℃ at ${place}`
-    
+        locationName.innerText = `${place}`
+        temp.innerText = `${temperture.toFixed(1)}℃`
+
+
+        const icon = json.weather[0].icon;
+        locationIcon.innerHTML = `<img src="icons/${icon}.png">`;
+
+        // if (json.weather[0].main ==="Clouds"){
+        //     const icon = document.querySelector("#icon");
+        //     icon.classList.add("fa")
+        //     icon.classList.add("fa-cloud");
+        // }
+        // else if(json.weather[0].main ==="Rain"){
+        //     const icon = document.querySelector("#icon");
+        //     icon.classList.add("fa")
+        //     icon.classList.add("fa-umbrella");
+        // }
+        // else if(json.weather[0].main ==="Clear"){
+        //     const icon = document.querySelector("#icon");
+        //     icon.classList.add("fa")
+        //     icon.classList.add("fa-fa-sun-o");
+        // }
+
+
     });
 }
 
