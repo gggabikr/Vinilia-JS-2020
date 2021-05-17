@@ -30,6 +30,7 @@ h1 {
   text-align: center;
   font-size: 50px;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -44,7 +45,9 @@ h4 {
 }
 
 .showing {
-  display: block;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .bgImage {
@@ -80,12 +83,13 @@ h4 {
   font-weight: 500;
 }
 
-main > form {
+.js-toDoForm {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-main > form > input {
+main > form > input:last-child {
   text-align: center;
   width: 80%;
   padding: 5px 0px;
